@@ -1,0 +1,8 @@
+{
+  "name": "cookies-playground-server",
+  "private": true,
+  "dependencies": {
+    "express": "^4.21.0",
+    "cookie-parser": "^1.4.7"
+  }
+}

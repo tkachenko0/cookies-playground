@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies Playground</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Cookies Playground</h1>
+
+    <div class="actions">
+      <button onclick="setCookies()">Set Cookies</button>
+      <button onclick="readBoth()">Read Cookies</button>
+      <button onclick="clearCookies()">Clear Cookies</button>
+    </div>
+
+    <div class="section">
+      <h2>Response</h2>
+      <div id="output">Click a button to start...</div>
+    </div>
+
+    <div class="section">
+      <h2>Cookie configurations reference</h2>
+      <table>
+        <tr>
+          <th>Cookie</th>
+          <th>Flags</th>
+          <th>Behavior</th>
+        </tr>
+        <tr>
+          <td>basic</td>
+          <td>-</td>
+          <td>Readable via JS, sent on every request</td>
+        </tr>
+        <tr>
+          <td>httponly</td>
+          <td>HttpOnly</td>
+          <td>NOT readable via JS, server-side only</td>
+        </tr>
+        <tr>
+          <td>secure</td>
+          <td>Secure</td>
+          <td>Sent only over HTTPS</td>
+        </tr>
+        <tr>
+          <td>samesite-strict</td>
+          <td>SameSite=Strict</td>
+          <td>Not sent on cross-site requests</td>
+        </tr>
+        <tr>
+          <td>samesite-lax</td>
+          <td>SameSite=Lax</td>
+          <td>Sent on top-level navigations only</td>
+        </tr>
+        <tr>
+          <td>samesite-none</td>
+          <td>SameSite=None; Secure</td>
+          <td>Sent on all cross-site requests</td>
+        </tr>
+      </table>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
