@@ -4,6 +4,21 @@ const path = require("path");
 
 const app = express();
 app.use(cookieParser());
+
+const ALLOWED_ORIGINS = [
+  "http://localhost:8282",
+  "http://127.0.0.1:8282",
+];
+
+app.use((req, res, next) => {
+  const origin = req.headers.origin;
+  if (ALLOWED_ORIGINS.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+    res.header("Access-Control-Allow-Credentials", "true");
+  }
+  next();
+});
+
 app.use(express.static(path.join(__dirname, "public")));
 
 const COOKIE_NAMES = [

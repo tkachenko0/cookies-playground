@@ -3,3 +3,7 @@ services:
     build: ./server
     ports:
       - "8181:8181"
+  cross-site:
+    build: ./cross-site
+    ports:
+      - "8282:8282"

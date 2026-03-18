@@ -1,0 +1,7 @@
+{
+  "name": "cookies-playground-cross-site",
+  "private": true,
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
